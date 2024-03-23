@@ -6,12 +6,24 @@ const Chat = () => {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    //const response = await getResponse(userInput);
-    //setChatHistory((prevHistory) => [...prevHistory, { user: userInput, ai: response }]);
+    fetch("http://localhost:8000/", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({key: userInput}),
+    })
+    .then(res => res.json())
+    .then(data => console.log('success'))
+    .catch(error => console.error('Error', error));
     setUserInput("");
   };
+
+  const handleInputChange = (e) => {
+    setUserInput(e.target.value);
+  }
 
   return (
     <div>
@@ -20,15 +32,15 @@ const Chat = () => {
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1>Chat Interface</h1>
-            <form onSubmit={handleSubmit}>
-              <input
+              <textarea
                 type="text"
                 value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
+                onChange={handleInputChange}
                 placeholder="Type your message..."
+                className="bg-gray-100 rounded-md p-2"
               />
-              <button type="submit">Send</button>
-            </form>
+              <br/>
+              <button type="submit" onClick={handleSubmit} className="border border-black bg-gray-100 p-2 rounded-md">Send</button>
             <div>
               {chatHistory.map((msg, index) => (
                 <div key={index}>

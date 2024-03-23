@@ -1,11 +1,20 @@
-from flask import Flask
+from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+data = []
 
-
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
-    return "a"
+    global data
+    if request.method == 'POST':
+        new_data = request.json
+        data.append(new_data)
+        return jsonify(data)
+    elif request.method == 'GET':
+        return jsonify(data)
+    
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
