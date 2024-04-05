@@ -13,8 +13,10 @@ def home():
         data.append(new_data)
         return jsonify(data)
     elif request.method == 'GET':
-        return jsonify(data)
+        return jsonify(data)  
     
+def getData():
+    return data
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
