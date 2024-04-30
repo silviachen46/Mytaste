@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Login from './Login'
-import Navigation from './Navigation';
+// import Navigation from './Navigation';
 import Homepage from './Homepage'
 
 
@@ -14,11 +14,11 @@ import About from "./about";
 import Blogs from "./blogs";
 import Chat from "./chat";
 
-import express from "express";
-import { Server } from 'socket.io';
-import {createServer} from "http";
+// import express from "express";
+// import { Server } from 'socket.io';
+// import {createServer} from "http";
 
-import { LlamaChatSession, LlamaContext, LlamaModel } from 'node-llama-cpp';
+// import { LlamaChatSession, LlamaContext, LlamaModel } from 'node-llama-cpp';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
