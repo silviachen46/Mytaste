@@ -27,3 +27,21 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### team roles
+Silvia - Running LM Studio locally, building chat interface, connecting frontend and backend
+Adesh - Building and testing with the frontend, authentication methods and user profile.
+Neil - Working on designing database with SQLalchemy to store the user data. Data collection for recipes.
+Jun - Building backend to interact with both general database and vector database.
+
+### technical architecture and tools used
+
+node.js for front-end
+Python with flask framework for back-end
+Langchain for preprocessing the recipes
+ChromaDB(vector Database)
+Running Large Language models locally with LMStudio
+Libraries from huggingface like sentence-transformers and datasets
+
+### a visualization
+
