@@ -36,12 +36,13 @@ Jun - Building backend to interact with both general database and vector databas
 
 ### technical architecture and tools used
 
-node.js for front-end
+Node.js for front-end
 Python with flask framework for back-end
 Langchain for preprocessing the recipes
 ChromaDB(vector Database)
 Running Large Language models locally with LMStudio
 Libraries from huggingface like sentence-transformers and datasets
 
-### a visualization
+### A visualization
+<img width="540" alt="ae3502cc11fc14658fd1248e25ffcad" src="https://github.com/CS222-UIUC-SP24/group-project-team-32/assets/119599002/1ab57870-88d1-454b-97f6-dfac9a6acb8f">
 
